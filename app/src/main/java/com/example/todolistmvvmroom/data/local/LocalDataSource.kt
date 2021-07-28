@@ -1,6 +1,8 @@
-package com.example.todolistmvvmroom.data.local.entity
+package com.example.todolistmvvmroom.data.local
 import androidx.lifecycle.LiveData
-import com.example.todolistmvvmroom.data.local.entity.room.TodoDAO
+import com.example.todolistmvvmroom.data.local.entity.Todo
+import com.example.todolistmvvmroom.data.local.room.TodoDAO
+
 
 class LocalDataSource private constructor(private val todoDAO: TodoDAO) {
 

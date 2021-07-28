@@ -1,7 +1,7 @@
 package com.example.todolistmvvmroom.repository
 
 import androidx.lifecycle.LiveData
-import com.example.todolistmvvmroom.data.local.entity.LocalDataSource
+import com.example.todolistmvvmroom.data.local.LocalDataSource
 import com.example.todolistmvvmroom.data.local.entity.Todo
 
 class TodoRepository(private val localDataSource: LocalDataSource) : ITodoRepository {

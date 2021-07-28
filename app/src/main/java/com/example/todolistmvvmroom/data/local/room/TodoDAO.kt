@@ -1,4 +1,4 @@
-package com.example.todolistmvvmroom.data.local.entity.room
+package com.example.todolistmvvmroom.data.local.room
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -13,7 +13,7 @@ interface TodoDAO {
     fun loadCompleted(): LiveData<List<Todo>>
 
     @Insert
-    suspend fun insertTodo(todo: Todo)
+    suspend fun insertTodo(vararg todo: Todo)
 
     @Update
     suspend fun updateTodo(todo: Todo)

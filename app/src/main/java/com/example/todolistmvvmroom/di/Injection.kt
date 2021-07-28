@@ -1,8 +1,8 @@
 package com.example.todolistmvvmroom.di
 
 import android.content.Context
-import com.example.todolistmvvmroom.data.local.entity.LocalDataSource
-import com.example.todolistmvvmroom.data.local.entity.room.TodoDb
+import com.example.todolistmvvmroom.data.local.LocalDataSource
+import com.example.todolistmvvmroom.data.local.room.TodoDb
 import com.example.todolistmvvmroom.repository.TodoRepository
 
 object Injection {

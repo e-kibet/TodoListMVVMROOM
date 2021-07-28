@@ -24,15 +24,14 @@ import jp.wasabeef.recyclerview.animators.FadeInUpAnimator
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var mLayoutManager: RecyclerView.LayoutManager
-
     private lateinit var viewModel: TodoViewModel
-
     private lateinit var adapter: ListAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater)
         setHasOptionsMenu(true)
         activity?.hideKeyboard()
@@ -59,10 +58,7 @@ class HomeFragment : Fragment() {
                 Navigation.createNavigateOnClickListener(R.id.action_homeFragment_to_addFragment)
             )
         }
-
-        // Setup RecyclerView
         setupRecyclerview()
-
         viewModel.getAllTodos().observe(viewLifecycleOwner, { list ->
             adapter.setData(list)
 
@@ -100,13 +96,11 @@ class HomeFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val delete: String
-
         when (item.itemId) {
             R.id.delete_selected -> {
                 delete = "selected"
                 showDialog(delete)
             }
-
             R.id.delete_all -> {
                 delete = "all"
                 showDialog(delete)

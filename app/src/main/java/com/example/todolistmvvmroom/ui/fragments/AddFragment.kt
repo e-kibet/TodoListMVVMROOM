@@ -22,10 +22,8 @@ class AddFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAddBinding.inflate(inflater)
-
-        var viewModelFactory = TodoViewModelFactory.getInstance(requireContext())
-        var todoViewModel = ViewModelProvider(this, viewModelFactory)[TodoViewModel::class.java]
-
+        val viewModelFactory = TodoViewModelFactory.getInstance(requireContext())
+        val todoViewModel = ViewModelProvider(this, viewModelFactory)[TodoViewModel::class.java]
         binding.submitButton.setOnClickListener{
             val title = binding.title.text.toString().trim()
             val description = binding.description.text.toString().trim()
