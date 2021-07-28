@@ -12,9 +12,7 @@ import com.example.todolistmvvmroom.viewmodel.TodoViewModel
 
 class ListAdapter(private val viewModel: TodoViewModel) :
     RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
-
     private var dataList = emptyList<Todo>()
-
     class MyViewHolder(private val binding: ItemTodoBinding) :
         RecyclerView.ViewHolder(binding.root) {
 

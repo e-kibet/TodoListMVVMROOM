@@ -3,6 +3,7 @@ package com.example.todolistmvvmroom.ui.fragments
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager.VERTICAL
 import com.example.todolistmvvmroom.databinding.FragmentHomeBinding
 import com.example.todolistmvvmroom.utils.shortToast
 import jp.wasabeef.recyclerview.animators.FadeInUpAnimator
+import timber.log.Timber
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -61,7 +63,8 @@ class HomeFragment : Fragment() {
         setupRecyclerview()
         viewModel.getAllTodos().observe(viewLifecycleOwner, { list ->
             adapter.setData(list)
-
+            Timber.d(list.toString())
+            Log.d("MYDATA", list.toString())
             if (list.isEmpty()) {
                 binding.noDataImage.visibility = View.VISIBLE
                 binding.noDataText.visibility = View.VISIBLE
