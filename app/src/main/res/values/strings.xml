@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TodoListMVVMROOM</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="empty">empty</string>
+    <string name="delete">delete</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="no_data">No Data</string>
+    <string name="add_task">Add Task</string>
+    <string name="title">Title</string>
+    <string name="description">Description..</string>
+    <string name="submit">Submit</string>
+    <string name="update">Update</string>
+    <string name="fill_all_fields">Please fill out all fields</string>
+    <string name="total_task">Total Task</string>
+    <string name="completed">Completed</string>
+    <string name="delete_checked_lists">Delete Checked Lists</string>
+    <string name="all_delete_are_you_sure">All checked lists will be deleted. Are you sure?</string>
+    <string name="yes">Yes</string>
+    <string name="toast_all_deleted">All checked lists have been deleted.</string>
+    <string name="no">No</string>
+    <string name="clear_lists">Clear Lists</string>
+    <string name="all_list_deleted_warning">All lists will be deleted. Are you sure?</string>
+    <string name="all_deleted_add_todo">All lists have been deleted. Add your To Do!</string>
+</resources>
