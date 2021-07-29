@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "791730962289",
+    "project_id": "fir-app-example-8bfb8",
+    "storage_bucket": "fir-app-example-8bfb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:791730962289:android:d7996ef03bc44e7c6340d0",
+        "android_client_info": {
+          "package_name": "com.example.todolistmvvmroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "791730962289-t7l1g81it0d5fr7p078qet3ipant2jhi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQjgggKuKjP0exa51Y64B0C3dfHNcsoB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "791730962289-t7l1g81it0d5fr7p078qet3ipant2jhi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

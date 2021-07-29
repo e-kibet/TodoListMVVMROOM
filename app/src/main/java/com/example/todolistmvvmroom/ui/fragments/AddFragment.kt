@@ -1,5 +1,6 @@
 package com.example.todolistmvvmroom.ui.fragments
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +10,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.todolistmvvmroom.R
 import com.example.todolistmvvmroom.databinding.FragmentAddBinding
+import com.example.todolistmvvmroom.firebase.RemoteConfigUtils
 import com.example.todolistmvvmroom.utils.hideKeyboard
 import com.example.todolistmvvmroom.utils.shortToast
 import com.example.todolistmvvmroom.viewmodel.TodoViewModel
 import com.example.todolistmvvmroom.viewmodel.TodoViewModelFactory
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
 class AddFragment : Fragment() {
 
@@ -26,6 +29,13 @@ class AddFragment : Fragment() {
         binding = FragmentAddBinding.inflate(inflater)
         val viewModelFactory = TodoViewModelFactory.getInstance(requireContext())
         val todoViewModel = ViewModelProvider(this, viewModelFactory)[TodoViewModel::class.java]
+
+        binding.submitButton.apply {
+            text =  RemoteConfigUtils.getButtonText()
+            setBackgroundColor(Color.parseColor(RemoteConfigUtils.getButtonColor()))
+        }
+
+
         binding.submitButton.setOnClickListener{
             val title = binding.title.text.toString().trim()
             val description = binding.description.text.toString().trim()
