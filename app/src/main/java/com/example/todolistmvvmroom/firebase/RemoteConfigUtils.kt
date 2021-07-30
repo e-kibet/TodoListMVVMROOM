@@ -1,13 +1,12 @@
 package com.example.todolistmvvmroom.firebase
-
 import android.annotation.SuppressLint
-import android.util.Log
 import com.google.firebase.ktx.BuildConfig
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
+import timber.log.Timber
 
 object RemoteConfigUtils {
 
@@ -32,14 +31,14 @@ object RemoteConfigUtils {
             minimumFetchIntervalInSeconds = if (BuildConfig.DEBUG){
                 0
             }else{
-                60 * 60
+                0
             }
         }
         remoteConfig.apply {
             setConfigSettingsAsync(configSettings)
             setDefaultsAsync(DEFALTS)
-            fetchAndActivate().addOnCompleteListener{
-                Log.d(TAG, "Remote config fetching from the firebase")
+            fetchAndActivate().addOnCompleteListener {
+                Timber.d("Remote config fetching from the firebase")
             }
         }
         return remoteConfig

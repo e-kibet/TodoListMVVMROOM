@@ -33,8 +33,6 @@ class AddFragmentTest : TestCase(){
        onView(withId(R.id.description)).perform(typeText(description))
        Espresso.closeSoftKeyboard()
        onView(withId(R.id.submit_button)).perform(click())
-
-
    }
 
 }
